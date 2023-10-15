@@ -5,12 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Item extends Model
+class UserItem extends Model
 {
     use HasFactory;
 
-
-  public function users() {
-    return $this->belongsToMany(User::class);
-  }
+    protected $table = 'user_item';
 }
